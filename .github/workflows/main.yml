@@ -28,7 +28,7 @@ jobs:
         run: npm install -g vercel
 
       - name: 🔑 Autenticar na Vercel
-        run: vercel login --token ${{ mjoFzea10olzSGv8mK69oQj1 }}
+        run: vercel login --token mjoFzea10olzSGv8mK69oQj1 
 
       - name: 📤 Fazer deploy para Vercel
-        run: vercel --prod --token ${{ mjoFzea10olzSGv8mK69oQj1 }}
+        run: vercel --prod --token mjoFzea10olzSGv8mK69oQj1 
