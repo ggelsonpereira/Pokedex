@@ -31,4 +31,4 @@ jobs:
         run: vercel login  # Remove o flag --token
 
       - name: 📤 Fazer deploy para Vercel
-        run: vercel --prod --token mjoFzea10olzSGv8mK69oQj1  # Mantém o flag --token
+        run: vercel deploy --prod --token mjoFzea10olzSGv8mK69oQj1 --yes
