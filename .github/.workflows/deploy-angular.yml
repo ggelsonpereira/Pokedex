@@ -1,0 +1,44 @@
+name: CI/CD para Angular
+
+on:
+  push:
+    branches:
+      - main # O pipeline será acionado para pushes na branch "main"
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.18.0
+
+      - name: Instalar Dependências
+        run: npm install
+
+      - name: Construir o Projeto
+        run: npm run build -- --prod
+
+      - name: Testar o Projeto
+        run: npm test
+
+        
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy para Produção
+        run: |
+          echo "Iniciando o deploy para o ambiente de produção..."
+          # Substitua abaixo pela lógica de deploy do seu projeto
+          echo "Deploy concluído!"
+
+      
