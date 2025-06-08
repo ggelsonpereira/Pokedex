@@ -27,8 +27,8 @@ jobs:
       - name: 🚀 Instalar a Vercel CLI
         run: npm install -g vercel
 
-       - name: 🔑 Autenticar na Vercel
-       - run: vercel login  # Removed the --token flag
+      - name: 🔑 Autenticar na Vercel
+        run: vercel login  # Remove o flag --token
 
-     - name: 📤 Fazer deploy para Vercel
-     - run: vercel --prod --token mjoFzea10olzSGv8mK69oQj1  # Keep the --token flag here
+      - name: 📤 Fazer deploy para Vercel
+        run: vercel --prod --token mjoFzea10olzSGv8mK69oQj1  # Mantém o flag --token
